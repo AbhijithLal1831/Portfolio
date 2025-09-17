@@ -1,44 +1,82 @@
-import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
-import HomeIcon from "@mui/icons-material/Home";
-import WhatshotIcon from "@mui/icons-material/Whatshot";
-import GrainIcon from "@mui/icons-material/Grain";
+import PermIdentityTwoToneIcon from "@mui/icons-material/PermIdentityTwoTone";
+import WhatshotTwoToneIcon from "@mui/icons-material/WhatshotTwoTone";
+import WorkHistoryTwoToneIcon from "@mui/icons-material/WorkHistoryTwoTone";
+import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
+import { Typography } from "@mui/material";
 export default function NavBarBreadcrumbs() {
   return (
-    <div role="presentation">
-      <Breadcrumbs aria-label="breadcrumb">
-        <Link
-          underline="hover"
-          sx={{ display: "flex", alignItems: "center" }}
-          color="inherit"
-          href="/"
-        >
-          <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          About
-        </Link>
-        <Link
-          underline="hover"
-          sx={{ display: "flex", alignItems: "center" }}
-          color="inherit"
-          href=""
-        >
-          <WhatshotIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          Skills
-        </Link>
-        <Typography
-          sx={{ color: "black", display: "flex", alignItems: "center" }}
-        >
-          <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          Projects
-        </Typography>
-        <Typography
-          sx={{ color: "black", display: "flex", alignItems: "center" }}
-        >
-          <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          Contact
-        </Typography>
-      </Breadcrumbs>
-    </div>
+    <Breadcrumbs
+      aria-label="breadcrumb"
+      sx={{
+        display: "flex",
+        justifyContent: "flex-end",
+        padding: "20px",
+        fontSize: "18px",
+      }}
+    >
+      <Link
+        underline="none"
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          fontSize: "inherit",
+          "&:hover": {
+            color: "green",
+          },
+        }}
+        color="inherit"
+        href="/"
+      >
+        <PermIdentityTwoToneIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+        <Typography variant="button">About</Typography>
+      </Link>
+      <Link
+        underline="none"
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          "&:hover": {
+            color: "green",
+          },
+        }}
+        color="inherit"
+        href=""
+      >
+        <WhatshotTwoToneIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+        <Typography variant="button">Skills</Typography>
+      </Link>
+      <Link
+        underline="none"
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          "&:hover": {
+            color: "green",
+          },
+        }}
+        color="inherit"
+        href=""
+      >
+        <WorkHistoryTwoToneIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+        <Typography variant="button">Projects</Typography>
+      </Link>
+      <Link
+        underline="none"
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          "&:hover": {
+            color: "green",
+          },
+        }}
+        color="inherit"
+        href=""
+      >
+        <EmailTwoToneIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+        <Typography variant="button">Contact</Typography>
+      </Link>
+    </Breadcrumbs>
   );
 }
