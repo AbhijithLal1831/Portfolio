@@ -1,6 +1,7 @@
 import "./App.css";
 import { Box, Container } from "@mui/material";
 import ProfileCard from "./Components/ProfileCard";
+import AboutCard from "./Components/About";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           <Box sx={{ width: "100vw", height: "100vh" }}>
             {/* <NavBarBreadcrumbs /> */}
             <ProfileCard />
+            <AboutCard />
           </Box>
         </Container>
       </div>

@@ -1,5 +1,5 @@
 import { Stack, Typography } from "@mui/material";
-import NavBarBreadcrumbs from "./navbar";
+import NavBarBreadcrumbs from "./NavBar";
 import Button from "@mui/material/Button";
 import DownloadIcon from "@mui/icons-material/Download";
 import Avatar from "@mui/material/Avatar";
@@ -13,6 +13,7 @@ export default function ProfileCard() {
     >
       <NavBarBreadcrumbs />
       <Stack
+        sx={{ marginBottom: "30px" }}
         direction={{ sm: "row", xs: "column-reverse" }}
         justifyContent={"space-evenly"}
         alignItems={"center"}
@@ -30,7 +31,7 @@ export default function ProfileCard() {
         </Stack>
         <Avatar
           alt="Abhijith"
-          src="\public\ExecutiveProfile.jpg"
+          src="/ExecutiveProfile.jpg"
           sx={{ width: "300px", height: "300px" }}
         />
       </Stack>
