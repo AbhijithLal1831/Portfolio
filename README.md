@@ -19,11 +19,11 @@ This is my personal **portfolio website** built using **React** and **Material U
 - **Deployment**:  GitHub Pages
 ## ✨ Future Improvements
 
-**.** Add dark/light mode toggle
+- Add dark/light mode toggle
 
-**.** Improve animations and transitions
+- Improve animations and transitions
 
-**.** Add a blog section for sharing technical articles
+- Add a blog section for sharing technical articles
 
 ## 📬 Contact
 
