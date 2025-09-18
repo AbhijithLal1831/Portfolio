@@ -17,7 +17,7 @@ This is my personal **portfolio website** built using **React** and **Material U
 - **UI Library**: Material UI (MUI)  
 - **Styling**: Custom themes and responsive layout using MUI's system  
 - **Deployment**:  GitHub Pages
-✨ Future Improvements
+## ✨ Future Improvements
 
 Add dark/light mode toggle
 
@@ -25,8 +25,8 @@ Improve animations and transitions
 
 Add a blog section for sharing technical articles
 
-📬 Contact
+## 📬 Contact
 
 If you’d like to connect, feel free to reach out:
 
-Email: abhijithlalharivaram@gmail.com
+**Email**: abhijithlalharivaram@gmail.com
