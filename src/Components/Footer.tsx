@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -27,25 +27,103 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
-                    style={{ color: "var(--text-primary)", transition: "transform 0.2s" }}
+                    className="group"
+                    style={{
+                        color: "var(--text-primary)",
+                        transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.5rem",
+                        padding: "0.75rem 1.25rem",
+                        borderRadius: "12px",
+                        background: "rgba(255, 255, 255, 0.03)",
+                        border: "1px solid rgba(255, 255, 255, 0.05)",
+                        textDecoration: "none"
+                    }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "translateY(-2px)";
+                        e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
+                        e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.1)";
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "translateY(0)";
+                        e.currentTarget.style.background = "rgba(255, 255, 255, 0.03)";
+                        e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.05)";
+                    }}
                 >
-                    <Github size={24} />
+                    <Github size={20} />
+                    <span style={{ fontSize: "0.9rem", fontWeight: 500 }}>GitHub</span>
+                    <ArrowUpRight size={16} style={{
+                        opacity: 0.7,
+                    }} />
                 </a>
                 <a
                     href="https://www.linkedin.com/in/abhijith-lal-47400b191?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
-                    style={{ color: "var(--text-primary)", transition: "transform 0.2s" }}
+                    className="group"
+                    style={{
+                        color: "var(--text-primary)",
+                        transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.5rem",
+                        padding: "0.75rem 1.25rem",
+                        borderRadius: "12px",
+                        background: "rgba(255, 255, 255, 0.03)",
+                        border: "1px solid rgba(255, 255, 255, 0.05)",
+                        textDecoration: "none"
+                    }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "translateY(-2px)";
+                        e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
+                        e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.1)";
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "translateY(0)";
+                        e.currentTarget.style.background = "rgba(255, 255, 255, 0.03)";
+                        e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.05)";
+                    }}
                 >
-                    <Linkedin size={24} />
+                    <Linkedin size={20} />
+                    <span style={{ fontSize: "0.9rem", fontWeight: 500 }}>LinkedIn</span>
+                    <ArrowUpRight size={16} style={{
+                        opacity: 0.7,
+                    }} />
                 </a>
                 <a
                     href="mailto:abhijithlalharivaram@gmail.com"
                     aria-label="Email"
-                    style={{ color: "var(--text-primary)", transition: "transform 0.2s" }}
+                    className="group"
+                    style={{
+                        color: "var(--text-primary)",
+                        transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.5rem",
+                        padding: "0.75rem 1.25rem",
+                        borderRadius: "12px",
+                        background: "rgba(255, 255, 255, 0.03)",
+                        border: "1px solid rgba(255, 255, 255, 0.05)",
+                        textDecoration: "none"
+                    }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "translateY(-2px)";
+                        e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
+                        e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.1)";
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "translateY(0)";
+                        e.currentTarget.style.background = "rgba(255, 255, 255, 0.03)";
+                        e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.05)";
+                    }}
                 >
-                    <Mail size={24} />
+                    <Mail size={20} />
+                    <span style={{ fontSize: "0.9rem", fontWeight: 500 }}>Email</span>
+                    <ArrowUpRight size={16} style={{
+                        opacity: 0.7,
+                    }} />
                 </a>
             </div>
 
