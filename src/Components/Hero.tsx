@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import ExecutiveProfile from '../assets/ExecutiveProfile.jpg';
+import Resume from '../assets/Abhijithlal_Resume.pdf';
 
 export default function Hero() {
     return (
@@ -35,7 +37,7 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                 >
                     <img
-                        src="/ExecutiveProfile.jpg"
+                        src={ExecutiveProfile}
                         alt="Abhijith Lal"
                         style={{
                             width: '100%',
@@ -104,7 +106,7 @@ export default function Hero() {
                         cursor: "pointer",
                         background: "rgba(255,255,255,0.1)"
                     }}
-                    onClick={() => window.open("/resume.pdf")}
+                    onClick={() => window.open(Resume, '_blank')}
                 >
                     Download Resume
                 </motion.button>
