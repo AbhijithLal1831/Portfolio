@@ -5,7 +5,7 @@ import { Code, Cloud, Server, Database, Terminal, Cpu } from "lucide-react";
 const items = [
     {
         title: "Experience",
-        content: "2.5+ Years in Full Stack Development",
+        content: "2+ Years in Full Stack Development",
         icon: <Terminal size={24} color="var(--text-primary)" />,
         colSpan: 2,
         rowSpan: 1,

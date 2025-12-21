@@ -34,7 +34,7 @@ const formatLabel = (path: string) => {
 // Convert to array of objects with src and label
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const techIcons = Object.entries(assetsResults)
-    .filter(([path]) => !path.includes("certified_badge") && !path.includes("cloudcertification"))
+    .filter(([path]) => !path.includes("certified_badge") && !path.includes("cloudcertification") && !path.includes("ExecutiveProfile"))
     .map(([path, module]: [string, any]) => ({
         src: module.default,
         label: formatLabel(path)
