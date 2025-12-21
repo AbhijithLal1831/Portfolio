@@ -1,11 +1,42 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+
+  /* Default Dark Theme Variables */
+  --bg-primary: #0f0f0f;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --accent: #FF2E00;
+
+  /* Glass Effect */
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --glass-hover-bg: rgba(255, 255, 255, 0.15);
+
+  /* Gradient Colors (Dark) */
+  --gradient-color-1: hsla(253, 16%, 7%, 1);
+  --gradient-color-2: hsla(225, 39%, 30%, 1);
+  --gradient-color-3: hsla(339, 49%, 30%, 1);
+
+  /* UI Elements */
+  --btn-bg: #1a1a1a;
+  --scrollbar-thumb: rgba(255, 255, 255, 0.2);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.4);
+
+  /* Aesthetic Enhancements */
+  --gold-text: #FFD700;
+  /* Bright Gold for Dark Mode */
+  --gold-text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  --heading-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  /* Pop for headings in dark mode */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,26 +44,101 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #ffffff;
+    --text-primary: #111111;
+    --text-secondary: rgba(0, 0, 0, 0.7);
+    --accent: #0056b3;
+    /* Keep Royal Blue or switch to Teal if preferred, keeping blue for specific consistency */
+
+    /* Glass Effect (Light - Colorful/Transparent) */
+    --glass-border: rgba(0, 86, 179, 0.1);
+    /* Slight blue tint to border */
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    /* More transparent to let gradients show through */
+    --glass-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+    --glass-hover-bg: rgba(255, 255, 255, 0.6);
+
+    /* Gradient Colors (Light - Colorful Pastels) */
+    --gradient-color-1: hsla(200, 80%, 90%, 1);
+    /* Soft Sky Blue */
+    --gradient-color-2: hsla(250, 70%, 92%, 1);
+    /* Soft Lavender */
+    --gradient-color-3: hsla(160, 60%, 90%, 1);
+    /* Soft Mint/Teal */
+
+    /* UI Elements */
+    --btn-bg: #f1f3f5;
+    --scrollbar-thumb: rgba(0, 0, 0, 0.2);
+    --scrollbar-thumb-hover: rgba(0, 0, 0, 0.4);
+
+    /* Aesthetic Overrides */
+    --gold-text: #B8860B;
+    /* Darker Goldenrod for White BG */
+    --gold-text-shadow: none;
+    --heading-shadow: none;
+    /* Clean look for light mode */
+  }
 }
-a:hover {
-  color: #535bf2;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--bg-primary);
+  /* Mesh Gradient Background using Variables */
+  background:
+    radial-gradient(at 0% 0%, var(--gradient-color-1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, var(--gradient-color-2) 0, transparent 50%),
+    radial-gradient(at 100% 0%, var(--gradient-color-3) 0, transparent 50%);
+  background-size: 200% 200%;
+  animation: gradient-animation 15s ease infinite;
+  color: var(--text-primary);
+  overflow-x: hidden;
 }
 
-h1 {
-  font-size: 3.2em;
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
   line-height: 1.1;
+  color: var(--text-primary);
+  text-shadow: var(--heading-shadow);
+}
+
+a {
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: inherit;
+  transition: color 0.25s;
+}
+
+a:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 button {
@@ -42,27 +148,50 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--btn-bg);
+  color: var(--text-primary);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s, color 0.25s;
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: var(--accent);
+  /* Used accent variable */
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Glassmorphism Utility */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.app-container {
+  padding-top: 80px;
+  /* Space for fixed navbar */
 }

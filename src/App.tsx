@@ -1,21 +1,23 @@
 import "./App.css";
-import { Box, Container } from "@mui/material";
-import ProfileCard from "./Components/ProfileCard";
-import AboutCard from "./Components/About";
+import Navbar from "./Components/Navbar";
+import Hero from "./Components/Hero";
+import BentoGrid from "./Components/BentoGrid";
+import TechStack from "./Components/TechStack";
+import Certifications from "./Components/Certifications";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
-    <>
-      <div>
-        <Container disableGutters maxWidth="xl">
-          <Box sx={{ width: "100vw", height: "100vh" }}>
-            {/* <NavBarBreadcrumbs /> */}
-            <ProfileCard />
-            <AboutCard />
-          </Box>
-        </Container>
-      </div>
-    </>
+    <div className="app-container">
+      <Navbar />
+      <main>
+        <Hero />
+        <BentoGrid />
+        <TechStack />
+        <Certifications />
+      </main>
+      <Footer />
+    </div>
   );
 }
 
