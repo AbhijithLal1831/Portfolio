@@ -3,7 +3,7 @@ name: Deploy static portfolio to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main", "fix/gitHubPages"]
+    branches: ["develop"]
   pull_request:
     branches:
       - main
