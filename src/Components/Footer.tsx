@@ -19,7 +19,8 @@ export default function Footer() {
                     display: "flex",
                     justifyContent: "center",
                     gap: "2rem",
-                    marginBottom: "2rem"
+                    marginBottom: "2rem",
+                    flexWrap: "wrap"
                 }}
             >
                 <a
