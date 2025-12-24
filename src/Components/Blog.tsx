@@ -185,7 +185,7 @@ export default function Blog() {
         )
     }, {
         title: "The GitOps Workflow: Zero-Touch Kubernetes Deployments",
-        excerpt: "How we eliminated manual 'kubectl apply' commands using ArgoCD and Git as our single source of truth.",
+        excerpt: "How I eliminated manual 'kubectl apply' commands using ArgoCD and Git as my single source of truth.",
         date: "Oct 2025",
         tags: ["#GitOps", "#Kubernetes", "#DevOps", "#ArgoCD"],
         image: "https://images.unsplash.com/photo-1667372335937-d03be6fb0a9c?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
