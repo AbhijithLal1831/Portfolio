@@ -28,11 +28,15 @@ export default function BlogCard({ title, excerpt, date, tags, image, onClick }:
             }}
         >
             {image && (
-                <div style={{ borderRadius: "12px", overflow: "hidden", marginBottom: "0.5rem" }}>
+                <div style={{
+                    borderRadius: "12px",
+                    overflow: "hidden",
+                    marginBottom: "0.5rem"
+                }}>
                     <img
                         src={image}
                         alt={title}
-                        style={{ width: "100%", height: "200px", objectFit: "cover" }}
+                        style={{ width: "100%", height: "auto", display: "block" }}
                     />
                 </div>
             )}
