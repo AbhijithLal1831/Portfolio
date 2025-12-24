@@ -4,6 +4,7 @@ import Hero from "./Components/Hero";
 import BentoGrid from "./Components/BentoGrid";
 import TechStack from "./Components/TechStack";
 import Certifications from "./Components/Certifications";
+import Blog from "./Components/Blog";
 import Footer from "./Components/Footer";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <BentoGrid />
         <TechStack />
         <Certifications />
+        <Blog />
       </main>
       <Footer />
     </div>
