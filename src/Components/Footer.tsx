@@ -1,6 +1,20 @@
-import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUpRight, Users } from "lucide-react";
+import { useEffect, useState, useRef } from "react";
 
 export default function Footer() {
+    const [visitorCount, setVisitorCount] = useState<number | null>(null);
+    const hasFetched = useRef(false);
+
+    useEffect(() => {
+        if (hasFetched.current) return;
+        hasFetched.current = true;
+
+        fetch("https://api.counterapi.dev/v1/abhijithlal-portfolio/visits/up")
+            .then((res) => res.json())
+            .then((data) => setVisitorCount(data.count))
+            .catch((err) => console.error("Error fetching visitor count:", err));
+    }, []);
+
     return (
         <footer id="contact"
             className="glass"
@@ -164,6 +178,25 @@ export default function Footer() {
                     filter: "drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)) drop-shadow(2px 2px 2px rgba(0,0,0,0.3))"
                 }}>Antigravity</span>.
             </p>
+
+            {visitorCount !== null && (
+                <div style={{
+                    marginTop: "2rem",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    padding: "0.5rem 1rem",
+                    background: "rgba(255, 255, 255, 0.03)",
+                    border: "1px solid rgba(255, 255, 255, 0.05)",
+                    borderRadius: "20px",
+                    color: "var(--text-secondary)",
+                    fontSize: "0.8rem",
+                    fontWeight: 500
+                }}>
+                    <Users size={14} />
+                    <span>{visitorCount.toLocaleString()} Visitors</span>
+                </div>
+            )}
         </footer>
     );
 }
