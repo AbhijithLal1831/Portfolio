@@ -1,11 +1,18 @@
 import { motion } from "framer-motion";
-import { Code, Cloud, Server, Database, Terminal, Cpu } from "lucide-react";
+import { Code, Cloud, Server, Database, Terminal, Cpu, Bot } from "lucide-react";
 
+const calculateExperience = () => {
+    const startDate = new Date('2023-08-01');
+    const currentDate = new Date();
+    const diffTime = Math.abs(currentDate.getTime() - startDate.getTime());
+    const diffYears = diffTime / (1000 * 60 * 60 * 24 * 365.25);
+    return diffYears.toFixed(1);
+};
 
 const items = [
     {
         title: "Experience",
-        content: "2+ Years in Full Stack Development",
+        content: `${calculateExperience()} Years in Full Stack Development`,
         icon: <Terminal size={24} color="var(--text-primary)" />,
         colSpan: 2,
         rowSpan: 1,
@@ -26,6 +33,14 @@ const items = [
         colSpan: 1,
         rowSpan: 2,
         gradient: "linear-gradient(135deg, rgba(95, 39, 205, 0.4), rgba(52, 31, 151, 0.1))",
+    },
+    {
+        title: "Artificial Intelligence",
+        content: "Interest and hands-on experience in RAG, Agentic AI and Gen AI",
+        icon: <Bot size={24} color="var(--text-primary)" />,
+        colSpan: 2,
+        rowSpan: 1,
+        gradient: "linear-gradient(135deg, rgba(232, 67, 147, 0.4), rgba(253, 121, 168, 0.1))",
     },
     {
         title: "Backend",
